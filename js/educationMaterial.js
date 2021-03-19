@@ -184,3 +184,35 @@
 //   ({ score }) => score >= LOW_SCORE && score < HIGH_SCORE
 // );
 // console.log(average); // Массив объектов с именами Поли и Хьюстон
+
+/*_____________________REDUCE_____________________________
+const tweets = [
+  { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+  { id: '001', likes: 2, tags: ['html', 'css'] },
+  { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+  { id: '003', likes: 8, tags: ['css', 'react'] },
+  { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+];
+
+// Пройдем по всем элементам коллекции и добавим значения свойства tags
+// к аккумулятору, начальное значение которого укажем пустым массивом [].
+// На каждой итерации пушим в аккумулятор все элементы tweet.tags и возвращаем его.
+const tags = tweets.reduce((allTags, tweet) => {
+  allTags.push(...tweet.tags);
+
+  return allTags;
+}, []);
+
+console.log(tags);
+
+// Наверное сбор тегов не одиночная операция, поэтому напишем функцию
+// для сбора тегов из коллекции
+const getTags = tweets =>
+  tweets.reduce((allTags, tweet) => {
+    allTags.push(...tweet.tags);
+
+    return allTags;
+  }, []);
+
+console.log(getTags(tweets));
+*/
